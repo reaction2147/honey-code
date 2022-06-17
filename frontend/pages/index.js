@@ -4,25 +4,30 @@ import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 
 const Home = () => {
- 
- const [[days, hours, minutes], setTime] = useState([30, 60 , 60])
+  const [days, setDays] = useState();
+  const [hours, setHours] = useState();
+  const [minutes, setMinutes] = useState();
+  const [seconds, setSeconds] = useState();
 
-  const tick = () => {
-    if(hours && minutes === 0) {
-      setTime([days -1 , 23, 59])
-    } else if(minutes === 0) {
-      setTime([days, hours - 1 , 59])
-    } else {
-      setTime([days, hours, minutes -1])
-    }
-  }
+  const test = () => {
+    var date = new Date(["2022", "07", "08"]);
+    const time = date.getTime() - Date.parse(new Date());
+    setTimeout(() => {
+    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+    setHours(Math.floor((time / (1000 * 60 * 60 * 60)) % 24));
+    setMinutes(Math.floor((time / 1000 / 60) % 60));
+    setSeconds(Math.floor((time / 1000) % 60));
+    }, 1000);
+  };
 
   useEffect(() => {
-    const timerId = setInterval(() => tick(), 60000)
-    return () => clearInterval(timerId)
-  })
-  console.log([days,hours,minutes])
-  console.log([minutes])
+    test();
+  }, [seconds]);
+
+const leadingZero = (num) => {
+  return num < 10 ? '0' + num : num
+}
+   
   return (
     <>
       <Head>
@@ -32,34 +37,52 @@ const Home = () => {
       </Head>
 
       <div className={styles.eclipse1}></div>
+      <div className={styles.eclipse2}></div>
       <div className={styles.launching_soon}>
         <h1>Launching Soon</h1>
       </div>
       <div className={styles.timer_container}>
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
-            <div className={styles.timer}></div>
-            <div className={styles.timer}></div>
+            <div className={styles.timer}>
+              <p>{leadingZero(days)}</p>
+            </div>
+            {/* <div className={styles.timer}></div> */}
           </div>
           <h2>Days</h2>
         </div>
 
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
-            <div className={styles.timer}></div>
-            <div className={styles.timer}></div>
+            <div className={styles.timer}>
+              <p>{leadingZero(hours)}</p>
+            </div>
+            {/* <div className={styles.timer}></div> */}
           </div>
           <h2>Hours</h2>
         </div>
 
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
-            <div className={styles.timer}></div>
-            <div className={styles.timer}></div>
+            <div className={styles.timer}>
+              <p>{leadingZero(minutes)}</p>
+            </div>
           </div>
-          <h2>Minutes</h2>
+          <h2>minutes</h2>
+        </div>
+        <div className={styles.countdown_container}>
+          <div className={styles.glass_container}>
+            <div className={styles.timer}>
+              <p>{leadingZero(seconds)}</p>
+            </div>
+          </div>
+          <h2>seconds</h2>
         </div>
       </div>
+      <div className={styles.let_you_know}>
+        <h1>We'll let you know when we are launching</h1>
+      </div>
+      
     </>
   );
 };

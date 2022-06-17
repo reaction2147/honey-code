@@ -1,12 +1,15 @@
 html {
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 body {
+  
   padding: 0;
   margin: 0;
   font-family: 'poppins', sans-serif;
   background-image: linear-gradient(to right, #2e208e, #522b93, #6e3899, #86469f, #9b56a5);  background-size: auto 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: left top;   
 }
 
