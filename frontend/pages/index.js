@@ -86,9 +86,9 @@ const leadingZero = (num) => {
         </div>
         </div>
       </div>
-      <div className={styles.let_you_know}>
+      {/* <div className={styles.let_you_know}>
         <h1>We'll let you know when we are launching</h1>
-      </div>
+      </div> */}
       
     </>
   );
