@@ -39,7 +39,7 @@ const leadingZero = (num) => {
       <div className={styles.eclipse1}></div>
       <div className={styles.eclipse2}></div>
       <div className={styles.launching_soon}>
-        <h1>Launching Soon</h1>
+        <h1>Launching sdasdg Soon</h1>
       </div>
       <div className={styles.timer_container}>
         <div className={styles.mobile_timer_container}>
