@@ -10,8 +10,10 @@ const Home = () => {
   const [seconds, setSeconds] = useState();
 
   const test = () => {
-    var date = new Date(["2022", "07", "08"]);
+    var date = new Date("2022-07-08T20:44:50");
     const time = date.getTime() - Date.parse(new Date());
+    console.log(date)
+    
     setTimeout(() => {
     setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
     setHours(Math.floor((time / (1000 * 60 * 60 * 60)) % 24));
