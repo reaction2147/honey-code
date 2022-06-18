@@ -1,106 +1,139 @@
 .launching_soon {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    // height: 30vh;
-    margin-bottom: 2em;
-    
-    h1 {
-        color: white;
-        font-family: 'Poppins';
-        font-weight: 400;
-        font-size: 5em;
-        line-height: 144px;
-        mix-blend-mode: normal;
-        z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  // height: 30vh;
+  margin-bottom: 2em;
+
+  h1 {
+    color: white;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 5em;
+    line-height: 144px;
+    mix-blend-mode: normal;
+    z-index: 5;
+    @media screen and (max-width: 390px) {
+        font-size: 2.7em;
     }
+  }
 }
 
 .let_you_know {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    h1 {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 48px;
-        color: white;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: white;
+    @media screen and (max-width: 390px) {
+        font-size: 22px;
+        text-align: center;
+        line-height: 1.5;
     }
+  }
 }
 
 .eclipse1 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top: -100px;
-    left: -100px;
-    background: linear-gradient(157.28deg, rgba(148, 38, 186, 0) 40.63%, #9426BA 79.18%);
-    border-radius: 1000px;
-    // z-index: 1;
-    opacity: 0.8;
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  top: -100px;
+  left: -100px;
+  background: linear-gradient(
+    157.28deg,
+    rgba(148, 38, 186, 0) 40.63%,
+    #9426ba 79.18%
+  );
+  border-radius: 1000px;
+  z-index: -10;
+  opacity: 0.8;
+  @media screen and (max-width: 390px) {
+      width: 300px;
+      height: 300px;
+  }
 }
 .eclipse2 {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    bottom: -100px;
-    right: -100px;
-    background: linear-gradient(157.28deg, #DF40A9 7.22%, #4D35A3 57.07%); transform: rotate(-0.54deg);
-    border-radius: 1000px;
-    z-index: -10;
-    opacity: 0.8;
+  position: fixed;
+  width: 550px;
+  height: 550px;
+  bottom: -100px;
+  right: -100px;
+  background: linear-gradient(157.28deg, #df40a9 7.22%, #4d35a3 57.07%);
+  transform: rotate(-0.54deg);
+  border-radius: 1000px;
+  z-index: -10;
+  opacity: 0.8;
+  @media screen and (max-width: 390px) {
+    width: 300px;
+    height: 300px;
+}
 }
 
 .timer_container {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 10;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -70px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+//   max-width: 700px;
+//   margin-left: auto;
+//   margin-right: auto;
+  margin-top: -70px;
+  .mobile_timer_container {
+      display: flex;
+      @media screen and(max-width: 900px) {
+          flex-direction: column;
+          max-width: 190px;
+      }
     .countdown_container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+      margin-right: 25px;
+      h2 {
+        color: white;
+        text-align: center;
+        margin-top: 5px;
+      }
+      .glass_container {
         display: flex;
-        flex-direction: column;
-        margin-left: 25px;
-        margin-right: 25px;
-        h2 {
-            color:white;
-            text-align: center;
-            margin-top: 5px;
+        flex-direction: row;
+        .timer {
+          width: 150px;
+          height: 160px;
+          background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.1) 100%
+          );
+          opacity: 0.5;
+          border: 0.5px solid #ffffff;
+          backdrop-filter: blur(65px);
+          border-radius: 5px;
+          margin: 7px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (max-width: 390px) {
+              height: 140px;
+          }
+          p {
+            color: black;
+            font-size: 4em;
+            font-family: "Digital Numbers";
+          }
         }
-        .glass_container {
-            display: flex;
-            flex-direction: row;
-            .timer {
-                width: 150px;
-                height: 160px;
-                background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.1) 100%);
-                opacity: 0.5;
-                border: 0.5px solid #FFFFFF;
-                backdrop-filter: blur(65px);
-                border-radius: 5px;
-                margin: 7px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                p {
-                    color: black;
-                    font-size: 4em;
-                }
-            }
-        }
-        
+      }
     }
-    
+  }
 }
-

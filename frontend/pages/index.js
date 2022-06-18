@@ -42,6 +42,7 @@ const leadingZero = (num) => {
         <h1>Launching Soon</h1>
       </div>
       <div className={styles.timer_container}>
+        <div className={styles.mobile_timer_container}>
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
             <div className={styles.timer}>
@@ -61,7 +62,9 @@ const leadingZero = (num) => {
           </div>
           <h2>Hours</h2>
         </div>
+        </div>
 
+        <div className={styles.mobile_timer_container}>
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
             <div className={styles.timer}>
@@ -70,6 +73,7 @@ const leadingZero = (num) => {
           </div>
           <h2>minutes</h2>
         </div>
+        
         <div className={styles.countdown_container}>
           <div className={styles.glass_container}>
             <div className={styles.timer}>
@@ -77,6 +81,7 @@ const leadingZero = (num) => {
             </div>
           </div>
           <h2>seconds</h2>
+        </div>
         </div>
       </div>
       <div className={styles.let_you_know}>
