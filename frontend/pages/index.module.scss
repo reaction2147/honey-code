@@ -15,7 +15,7 @@
     line-height: 144px;
     mix-blend-mode: normal;
     z-index: 5;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 450px) {
         font-size: 2.7em;
     }
   }
@@ -34,7 +34,7 @@
     font-size: 32px;
     line-height: 48px;
     color: white;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 450px) {
         font-size: 22px;
         text-align: center;
         line-height: 1.5;
